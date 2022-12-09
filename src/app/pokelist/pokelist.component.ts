@@ -38,42 +38,6 @@ export class PokelistComponent {
               'atack':response.stats[1].base_stat,
               'types':type});
 
-              /*const tips = document.getElementById("type");
-              switch ("tips") {
-                case 'Fire':
-                 tips.style.background = "blue";
-                  break;
-                case 'Water':
-                  this.clase_fondo='azul'
-                  break;
-                case 'Grass ':
-                  this.clase_fondo='verde'
-                  break
-                case 'Poison':
-                  this.clase_fondo='rosa'
-                  break
-                case 'Bug':
-                  this.clase_fondo='negro'
-                  break
-                case 'Flying':
-                  this.clase_fondo='azul__claro'
-                  break
-                case 'Normal':
-                  this.clase_fondo='naranja'
-                  break
-                case 'Fairy':
-                  this.clase_fondo='rosa__claro'
-                  break
-                case 'Psychic':
-                  this.clase_fondo='verde__claro'
-                  break
-                case 'Electric':
-                  this.style.clase_fondo='amarillo'
-                  break*/
-    
-    
-              
-
         })
       });
     });

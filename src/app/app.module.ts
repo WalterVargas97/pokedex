@@ -16,6 +16,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 /* Esto es de ANGULAR MATERIAL*/
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
+import { StartComponent } from './start/start.component';
+import { TeamComponent } from './team/team.component';
 
 
 
@@ -28,7 +30,9 @@ import {MatInputModule} from '@angular/material/input';
     PokelistComponent,
     HeaderComponent,
     FooterComponent,
-    BuscadorComponent
+    BuscadorComponent,
+    StartComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,
