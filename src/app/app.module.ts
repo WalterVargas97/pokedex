@@ -11,6 +11,16 @@ import { PokelistComponent } from './pokelist/pokelist.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BuscadorComponent } from './buscador/buscador.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+/* Esto es de ANGULAR MATERIAL*/
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +34,11 @@ import { BuscadorComponent } from './buscador/buscador.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
