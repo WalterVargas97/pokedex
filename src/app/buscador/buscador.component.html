@@ -30,8 +30,11 @@
 </section>-->
 <div class="buscador">
     
+    <div class="container_buscador">
+        <img src="assets/images/pokeball.png" alt="pokeball" class="pokeball">
+        <input class="inputbuscador" type="text" (keyup)="lister()" placeholder="Busca un pokemon" [(ngModel)]="name" value="{{name}}">
+    </div>
     
-    <input type="text" (keyup)="lister()" placeholder="Search pokemon" [(ngModel)]="name" value="{{name}}">
     <div id="lista-pk" >
       <ul class="{{display}}">
       <li *ngFor="let pokemon of pokemons"  (click)="filter(pokemon.name)" >{{pokemon.name}}</li>
@@ -44,9 +47,11 @@
     <input type="hidden"  #ascantidad  [(ngModel)]="cantidad" id="cantidad">
     <input type="hidden"  #ascantidad  [(ngModel)]="lista" id="lista">
     <br>
-    <button class="go boton efecto" (click)="search()">Start</button>
-    <button class="sear boton efecto" (click)="reset()">Reset</button>
-    <button class="sear boton efecto" (click)="aleatoria()">Random</button>
+    <div class="botones_container">
+        <button class="buscar" (click)="search()">Buscar</button>
+    <button class="reiniciar" (click)="reset()">Nueva Búsqueda</button>
+    </div>
+    
   
     <div #asmensaje  id="mensaje" style="color:red">{{mensaje}} </div>
     <div #astarjeta id="tarjeta" class="{{tarjeta}}">

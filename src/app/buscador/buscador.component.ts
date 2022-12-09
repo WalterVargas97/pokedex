@@ -4,7 +4,7 @@ import { Component, OnInit} from '@angular/core';
 import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-pokemon-search',
+  selector: 'app-buscador',
   templateUrl: './buscador.component.html',
   styleUrls: ['./buscador.component.sass']
 })
@@ -36,23 +36,17 @@ export class BuscadorComponent implements OnInit {
   }
   //selecciona un pokemon de la lista
   filter(namePokemon:any){
-    this.display='ocultar'
+    this.display='none'
     this.name=namePokemon
   }
-  //busca un pokemon aleatorio
-  aleatoria(){
-    const aleatorio = this.pokemons_all[Math.floor(Math.random() * this.pokemons_all.length)];
-    this.name=aleatorio.name
-    this.search()
-  }
+  
   //nos muestra la lista de pokemones a buscar
   lister(){
     this.display='mostrar'
     this.pokemons=[]
     this.pokemons=this.pokemons_all.filter(x=>x.name.includes(this.name))
   }
-
-  //reinicia toda la busqueda
+  //reinicia  la busqueda
   reset(){
     this.pokemons_tj=[]
     this.mensaje=''
@@ -60,7 +54,7 @@ export class BuscadorComponent implements OnInit {
     this.cantidad=0 //inicializar variable
     this.lista=''
   }
-
+  
   //busca y muestra los pokemones
   search(){
       this.mensaje=''
@@ -79,10 +73,6 @@ export class BuscadorComponent implements OnInit {
         this.cantidad=this.cantidad+1;
 
         let type='';
-        //guarda todos los tipos de los pokemones seleccionados ej Veneno, Aire
-        d.types.forEach((element: any) => {
-          type=type+element.type.name.charAt(0).toUpperCase()+element.type.name.slice(1)+' '
-        });
 
         //se llena el arreglo para mostrar en el html
         this.pokemons_tj.unshift({
@@ -93,11 +83,6 @@ export class BuscadorComponent implements OnInit {
             'atack':d.stats[1].base_stat,
             'types':type});
 
-        if(this.cantidad==6){
-          //agrega clases nueva para la tarjeta y se indica que esta listo
-          this.tarjeta='listo-tarjeta'
-          this.mensaje='Este es tu equipo pokemon '
-        }
 
       },(error :any) =>{
         //se verifica el error
