@@ -31,7 +31,7 @@
 <div class="buscador">
     
     <div class="container_buscador">
-        <img src="assets/images/pokeball.png" alt="pokeball" class="pokeball">
+        <a title="myteam" href="/src/app/team/team.component.html"><img src="assets/images/pokeball.png" alt="pokeball" class="pokeball"></a>
         <input class="inputbuscador" type="text" (keyup)="lister()" placeholder="Busca un pokemon" [(ngModel)]="name" value="{{name}}">
     </div>
     
@@ -49,7 +49,7 @@
     <br>
     <div class="botones_container">
         <button class="buscar" (click)="search()">Buscar</button>
-    <button class="reiniciar" (click)="reset()">Nueva Búsqueda</button>
+        <button class="reiniciar" (click)="reset()">Nueva Búsqueda</button>
     </div>
     
   
